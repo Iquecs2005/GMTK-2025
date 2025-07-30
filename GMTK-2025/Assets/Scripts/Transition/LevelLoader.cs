@@ -13,15 +13,6 @@ public class LevelLoader : MonoBehaviour
     [Header("Transition Parameters")]
     public float transitionTime = 1f;
 
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            LoadNextLevel();
-        }
-    }
-
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
