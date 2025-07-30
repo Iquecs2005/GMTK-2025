@@ -13,17 +13,15 @@ public class LevelLoader : MonoBehaviour
     [Header("Transition Parameters")]
     public float transitionTime = 1f;
 
-    public void LoadNextLevel()
+    public void LoadLevelByName(string sceneName)
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        StartCoroutine(LoadLevelByNameCoroutine(sceneName));
     }
 
-    IEnumerator LoadLevel(int levelIndex)
+    IEnumerator LoadLevelByNameCoroutine(string sceneName)
     {
         transition.SetTrigger("Start");
-
         yield return new WaitForSeconds(transitionTime);
-
-        SceneManager.LoadScene(levelIndex);
+        SceneManager.LoadScene(sceneName);
     }
 }
