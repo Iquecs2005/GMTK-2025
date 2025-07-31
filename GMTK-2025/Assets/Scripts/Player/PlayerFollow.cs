@@ -14,7 +14,7 @@ public class PlayerFollow : MonoBehaviour
         offset = transform.position - target.position;
     }
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         transform.position = target.position + (Vector3)offset;
     }

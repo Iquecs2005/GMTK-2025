@@ -120,7 +120,7 @@ public class PlayerLean : MonoBehaviour
     {
         if (Mathf.Abs(currentAngle) > deathAngleBound) 
         {
-            Destroy(gameObject);
+            pc.OnDeath.Invoke();
         }
     }
 }

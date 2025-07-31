@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveInput;
     private float currentAcceleration;
     private float currentDesacceleration;
+    private bool canMove = true;
 
     private void Start()
     {
@@ -38,23 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ApplyMovement()
     {
-        //if (!shouldMove) return;
-
-        //Vector2 targetSpeed = moveInput * maxMoveSpeed;
-
-        //Vector2 speedDif = targetSpeed - pc.rb.velocity;
-
-        //float accelRate;
-        //if (targetSpeed.magnitude > 0.01f)
-        //{
-        //    accelRate = currentAcceleration;
-        //}
-        //else
-        //{
-        //    accelRate = currentDesacceleration;
-        //}
-
-        //pc.rb.AddForce(speedDif * accelRate);
+        if (!canMove) return;
 
         float targetSpeed = moveInput * maxMoveSpeed;
 
@@ -81,5 +66,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         pc.ballRb.AddForce(Vector2.right * speedDif * accelRate);
+    }
+
+    public void SetMovement(bool value) 
+    {
+        canMove = value;
     }
 }
