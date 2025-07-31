@@ -16,6 +16,7 @@ public class LevelLoader : MonoBehaviour
     public void LoadLevelByName(string sceneName)
     {
         StartCoroutine(LoadLevelByNameCoroutine(sceneName));
+        Time.timeScale = 1;
     }
 
     IEnumerator LoadLevelByNameCoroutine(string sceneName)
@@ -28,5 +29,6 @@ public class LevelLoader : MonoBehaviour
     public void RestartCurrentScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
     }
 }
