@@ -34,6 +34,8 @@ public class PlayerLean : MonoBehaviour
 
     private void NormalBalance() 
     {
+        //TODO Refatorar em funções
+
         angularAcceleration = -speedToRotation * pc.ballRb.velocity.x;
         angularVelocity += angularAcceleration * Time.deltaTime;
         angularVelocity *= (1 - rotationDrag);

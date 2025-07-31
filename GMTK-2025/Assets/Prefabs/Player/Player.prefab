@@ -65,6 +65,7 @@ MonoBehaviour:
   maxResetForce: 30
   minResetForce: 1
   opposingForce: 35
+  angleInfluence: 0.02
   opposingForceVisualization: 0
   sr: {fileID: 7765468576385239396}
 --- !u!1 &4239381802158278850
