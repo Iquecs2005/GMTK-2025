@@ -1,0 +1,56 @@
+{
+    "name": "NormalInput",
+    "maps": [
+        {
+            "name": "Normal",
+            "id": "03f6f9d5-8813-4ff8-8f35-1b9434dec86a",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "eca6692d-bbec-493a-b74b-4a6051e9a7d6",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "4ca904be-99fc-4b88-9889-4d968fcf83b9",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "1ee657cf-7ac4-46f2-a957-fca8701a9a0f",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "8086c599-5669-4f8f-99ab-84be7b14598d",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
