@@ -681,6 +681,10 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1318121579037136125, guid: 2d7cdc0d02433ec48a00c8a05a2e091a, type: 3}
+      propertyPath: isThisSceneReloadable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4801144474414579445, guid: 2d7cdc0d02433ec48a00c8a05a2e091a, type: 3}
       propertyPath: m_Name
       value: Level Loader
