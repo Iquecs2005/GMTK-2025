@@ -10,4 +10,9 @@ public class LixoManager : MonoBehaviour
     {
         currentLixo += value;
     }
+
+    public void JogarLixoFora(int value)
+    {
+        currentLixo -= value;
+    }
 }
