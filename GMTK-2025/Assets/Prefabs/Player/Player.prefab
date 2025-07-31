@@ -63,9 +63,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pc: {fileID: 260643921168909717}
-  speedToRotation: 25
+  speedToRotation: 20
   rotationDrag: 0.1
-  maxResetForce: 30
+  maxResetForce: 5
   minResetForce: 1
   minAngleResetForce: 0
   opposingForce: 35
@@ -589,9 +589,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pc: {fileID: 260643921168909717}
-  maxMoveSpeed: 5
-  moveAcceleration: 5
-  moveDesacceleration: 1
+  maxMoveSpeed: 10
+  moveAcceleration: 7
+  moveDesacceleration: 2
   accelerationColor: 0
   sr: {fileID: 6607009381054177515}
 --- !u!114 &7587416363920889003
