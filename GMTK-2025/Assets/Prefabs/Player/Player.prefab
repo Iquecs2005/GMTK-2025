@@ -358,6 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerFollow: {fileID: 7102168602743339368}
   ballRb: {fileID: 7020861332398523779}
+  ballSizeController: {fileID: 7587416363920889003}
   OnDeath:
     m_PersistentCalls:
       m_Calls:
@@ -424,6 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55de7ed0f49f8a042a34ee581e6cfe91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pc: {fileID: 260643921168909717}
   currentLixo: 0
 --- !u!1 &6033391042674125282
 GameObject:
