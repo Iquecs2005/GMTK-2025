@@ -5,12 +5,6 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
-    // [SerializeField] GameObject continueBtn;
-
-    // void Start()
-    // {
-    //     continueBtn = GetComponent
-    // }
 
     void Update()
     {
@@ -18,8 +12,6 @@ public class PauseManager : MonoBehaviour
         {
             Pause();
         }
-
-        Debug.Log(Time.timeScale);
     }
 
     public void Pause()
