@@ -6,6 +6,7 @@ public class PlayerFollow : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private Transform target;
+    [SerializeField] private Rigidbody2D rb;
 
     private Vector2 offset;
 
@@ -16,7 +17,7 @@ public class PlayerFollow : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position = target.position + (Vector3)offset;
+        rb.MovePosition(target.position + (Vector3)offset);
     }
 
     public void ChangeYOffset(float ballScale) 
