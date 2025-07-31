@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class PlayerLean : MonoBehaviour
 {
+    [Header("Components")]
     [SerializeField] private PlayerController pc;
     //[SerializeField] private float rotationSpeed;
+
+    [Header("Variables")]
     [SerializeField] private float speedToRotation;
     [SerializeField] private float rotationDrag;
     [SerializeField] private float maxResetForce;
     [SerializeField] private float minResetForce;
+    [SerializeField] private float minAngleResetForce;
     [SerializeField] private float opposingForce;
     [SerializeField] private float angleInfluence;
+    [SerializeField] private float deathAngleBound;
 
     private float angularVelocity;
     private float angularAcceleration;
+    private float currentAngle;
 
     [Header("Debug")]
     [SerializeField] private bool opposingForceVisualization;
@@ -29,10 +35,27 @@ public class PlayerLean : MonoBehaviour
 
     private void FixedUpdate()
     {
-        NormalBalance();
+        currentAngle = GetCurrentAngle();
+        ApplyRotation();
+        CheckAngleBound();
     }
 
-    private void NormalBalance() 
+    private float GetCurrentAngle() 
+    {
+        //Returns a angle from -180 to 180
+        //Counterclockwise rotation is positive, Clockwise is negative
+
+        float currentAngleDiff = transform.eulerAngles.z;
+        if (currentAngleDiff > 180)
+        {
+            //Changes from 180 to 360, to -180 to 0
+            currentAngleDiff -= 360;
+        }
+
+        return currentAngleDiff;
+    }
+
+    private void ApplyRotation() 
     {
         //TODO Refatorar em funções
 
@@ -41,53 +64,63 @@ public class PlayerLean : MonoBehaviour
         angularVelocity *= (1 - rotationDrag);
         if (Mathf.Abs(angularVelocity) < 0.01f) angularVelocity = 0;
 
-        float currentAngleDiff = transform.eulerAngles.z;
-        if (currentAngleDiff > 180) 
-        {
-            //Changes from 180 to 360, to -180 to 0
-            currentAngleDiff -= 360;
-        }
-        //Current Angle is a value between -180 and 180
+        ApplyResetForce(angularVelocity);
+
+        float currentAngleInfluence = 1 + angleInfluence * Mathf.Abs(currentAngle);
+
+        transform.eulerAngles += new Vector3(0, 0, -angularVelocity * Time.deltaTime * currentAngleInfluence);
+    }
+
+    private void ApplyResetForce(float currentAngularVelocity) 
+    {
+        if (Mathf.Abs(currentAngle) < minAngleResetForce) return;
 
         float currentResetForce = maxResetForce;
-        if (angularVelocity * currentAngleDiff > 0) 
+
+        if (currentAngularVelocity * currentAngle > 0)
         {
             currentResetForce = opposingForce;
+
             if (opposingForceVisualization) sr.color = Color.green;
         }
-        else 
+        else
         {
-            if (opposingForceVisualization) sr.color = defaultColor;
-            if (Mathf.Abs(angularVelocity) >= 1)
+            if (Mathf.Abs(currentAngularVelocity) >= 1)
             {
-                currentResetForce *= (1 / Mathf.Abs(angularVelocity));
+                currentResetForce *= (1 / Mathf.Abs(currentAngularVelocity));
             }
+
+            if (opposingForceVisualization) sr.color = defaultColor;
         }
 
-        if (currentResetForce < minResetForce) 
+        if (currentResetForce < minResetForce)
         {
             currentResetForce = minResetForce;
         }
 
-        if (transform.eulerAngles.z <= 180) 
+        if (currentAngle > 0)
         {
             transform.eulerAngles -= new Vector3(0, 0, currentResetForce * Time.deltaTime);
-            if (transform.eulerAngles.z > 180) 
+            if (GetCurrentAngle() < 0)
             {
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
             }
         }
-        else 
+        else if (currentAngle < 0)
         {
             transform.eulerAngles += new Vector3(0, 0, currentResetForce * Time.deltaTime);
-            if (transform.eulerAngles.z < 180)
+            if (GetCurrentAngle() > 0)
             {
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
             }
         }
+    }
 
-        float currentAngleInfluence = 1 + angleInfluence * Mathf.Abs(currentAngleDiff);
-
-        transform.eulerAngles += new Vector3(0, 0, -angularVelocity * Time.deltaTime * currentAngleInfluence);
+    private void CheckAngleBound() 
+    {
+        if (Mathf.Abs(currentAngle) > deathAngleBound) 
+        {
+            Destroy(gameObject);
+        }
     }
 }

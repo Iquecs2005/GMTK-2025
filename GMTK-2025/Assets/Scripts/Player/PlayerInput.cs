@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInput : MonoBehaviour
 {
+    [Header("Events")]
     [SerializeField] private UnityEvent<float> OnMove;
 
     public void OnMoveAction(InputAction.CallbackContext value) 

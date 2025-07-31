@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Components")]
+    public PlayerFollow playerFollow;
     public Rigidbody2D ballRb;
 }

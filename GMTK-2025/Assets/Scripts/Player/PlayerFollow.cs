@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerFollow : MonoBehaviour
 {
-    [SerializeField]
-    private Transform target;
+    [Header("Components")]
+    [SerializeField] private Transform target;
 
     private Vector2 offset;
 
@@ -17,5 +17,10 @@ public class PlayerFollow : MonoBehaviour
     private void LateUpdate()
     {
         transform.position = target.position + (Vector3)offset;
+    }
+
+    public void ChangeYOffset(float ballScale) 
+    {
+        offset.y = ballScale / 2;
     }
 }
