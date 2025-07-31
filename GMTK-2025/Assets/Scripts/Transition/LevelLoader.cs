@@ -13,6 +13,19 @@ public class LevelLoader : MonoBehaviour
     [Header("Transition Parameters")]
     public float transitionTime = 1f;
 
+    public bool isThisSceneReloadable;
+
+    void Update()
+    {
+        if (isThisSceneReloadable)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                RestartCurrentScene();
+            }
+        }
+    }
+
     public void LoadLevelByName(string sceneName)
     {
         StartCoroutine(LoadLevelByNameCoroutine(sceneName));
