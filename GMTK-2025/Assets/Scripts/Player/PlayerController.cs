@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [Header("Events")]
     public UnityEvent OnDeath;
 
+    public bool dead { get; private set; } = false;
     public bool sticky { get; private set; } = false;
 
     public void SetStickyBehaviour(bool stickyValue) 
@@ -31,5 +32,13 @@ public class PlayerController : MonoBehaviour
             print(ball.GetComponent<StickyBallScript>());
             Destroy(ball.GetComponent<StickyBallScript>());
         }
+    }
+
+    public void SetPlayerDeath() 
+    {
+        if (dead) return;
+
+        dead = true;
+        OnDeath.Invoke();
     }
 }
