@@ -5,28 +5,30 @@ using UnityEngine.UI;
 
 public class MusicManager : MonoBehaviour
 {
-    private AudioSource audioSource;
+    private static AudioSource audioSource;
     public AudioClip backgroundMusic;
-    [SerializeField] private Slider musicSlider;
 
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+
     }
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         if (backgroundMusic != null)
         {
             PlayBackgroundMusic(false, backgroundMusic);
         }
 
-        musicSlider.onValueChanged.AddListener(delegate { SetVolume(musicSlider.value); });
+        float MusicSavedVolume = PlayerPrefs.GetFloat("MusicVolume", 1f);
+        SetVolume(MusicSavedVolume);
     }
 
     public static void SetVolume(float volume)
     {
-        AudioManager.musicInstance.audioSource.volume = volume;
+        audioSource.volume = volume;
     }
 
     public void PlayBackgroundMusic(bool resetSong, AudioClip audioClip = null)
