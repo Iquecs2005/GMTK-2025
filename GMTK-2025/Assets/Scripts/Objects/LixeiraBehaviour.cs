@@ -19,21 +19,9 @@ public class LixeiraBehaviour : MonoBehaviour
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    void Update()
-    {
         lixeiraEspaco = maxLixo - currentLixo;
 
-        if (lixeiraEspaco == 0)
-        {
-            spriteRenderer.sprite = lixeiraCheia;
-        }
-        else
-        {
-            spriteRenderer.sprite = lixeiraVazia;
-        }
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,7 +45,10 @@ public class LixeiraBehaviour : MonoBehaviour
                 int lixoTransferido = Mathf.Min(playerLixo, lixeiraEspaco);
 
                 playerLixoManager.JogarLixoFora(lixoTransferido);
+                GameManager.Instance.GetLixoControllerRef().AddLixoCollected(lixoTransferido);
                 currentLixo += lixoTransferido;
+                lixeiraEspaco -= lixoTransferido;
+                ChangeSprite();
 
                 Debug.Log($"Jogou fora: {lixoTransferido} | Player lixo: {playerLixoManager.currentLixo} | Lixeira lixo: {currentLixo}");
             }
@@ -65,6 +56,18 @@ public class LixeiraBehaviour : MonoBehaviour
             {
                 Debug.Log("Nada para jogar fora ou lixeira cheia!");
             }
+        }
+    }
+
+    private void ChangeSprite()
+    {
+        if (lixeiraEspaco == 0)
+        {
+            spriteRenderer.sprite = lixeiraCheia;
+        }
+        else
+        {
+            spriteRenderer.sprite = lixeiraVazia;
         }
     }
 }

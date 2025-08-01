@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     private GameObject playerObject;
+    private LixoController lixoControllerRef;
 
     private void Awake()
     {
@@ -26,7 +27,15 @@ public class GameManager : MonoBehaviour
         if (playerObject != null) return playerObject;
 
         playerObject = GameObject.Find("Player");
-        print(playerObject);
         return playerObject;
+    }
+
+    public LixoController GetLixoControllerRef()
+    {
+        if (lixoControllerRef != null) return lixoControllerRef;
+
+        lixoControllerRef = GameObject.Find("LevelCompletedCanvas").GetComponent<LixoController>();
+        print(lixoControllerRef);
+        return lixoControllerRef;
     }
 }
