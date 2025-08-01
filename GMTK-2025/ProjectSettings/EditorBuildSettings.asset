@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/Test Haykal/MainMenu.unity
+    guid: 92841d851d5bb3c439d833056793ada7
+  - enabled: 1
+    path: Assets/Scenes/Test Haykal/LevelMenu.unity
+    guid: d2755e9fbb416bc48990e0085785d128
   - enabled: 1
     path: Assets/Scenes/Test Haykal/TestA.unity
     guid: 8302fff88f313d4428fa976b711703e5
   - enabled: 1
     path: Assets/Scenes/Test Haykal/TestB.unity
     guid: 28509f16ef0fcb54f9f60e0cd1a47180
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects: {}
