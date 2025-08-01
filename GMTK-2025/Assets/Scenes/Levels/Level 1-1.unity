@@ -128,6 +128,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8755412544168669250, guid: c2030c3be26a24a44ad62ec7cd9da9f0, type: 3}
   m_PrefabInstance: {fileID: 846794165}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &60416549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2035502250829551374, guid: a9da405d91cf19a4aac4cb71e2a20e72, type: 3}
+  m_PrefabInstance: {fileID: 1552517315}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &548141992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -559,6 +564,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2030c3be26a24a44ad62ec7cd9da9f0, type: 3}
+--- !u!1 &960353365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6033391042674125282, guid: a9da405d91cf19a4aac4cb71e2a20e72, type: 3}
+  m_PrefabInstance: {fileID: 1552517315}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &981035635
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,6 +682,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1b14c2cc80d1a748b6ebfbae2473ad8, type: 3}
+--- !u!1001 &1496442339
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7308337883944276745, guid: 6fb8749ef2af3c44e8c379199420622c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.546626
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308337883944276745, guid: 6fb8749ef2af3c44e8c379199420622c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.9041655
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308337883944276745, guid: 6fb8749ef2af3c44e8c379199420622c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.022609655
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308337883944276745, guid: 6fb8749ef2af3c44e8c379199420622c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308337883944276745, guid: 6fb8749ef2af3c44e8c379199420622c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308337883944276745, guid: 6fb8749ef2af3c44e8c379199420622c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308337883944276745, guid: 6fb8749ef2af3c44e8c379199420622c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308337883944276745, guid: 6fb8749ef2af3c44e8c379199420622c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308337883944276745, guid: 6fb8749ef2af3c44e8c379199420622c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308337883944276745, guid: 6fb8749ef2af3c44e8c379199420622c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521672842444988538, guid: 6fb8749ef2af3c44e8c379199420622c, type: 3}
+      propertyPath: m_Name
+      value: Gamemanager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fb8749ef2af3c44e8c379199420622c, type: 3}
 --- !u!1001 &1552517315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -680,6 +747,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 260643921168909717, guid: a9da405d91cf19a4aac4cb71e2a20e72, type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 960353365}
+    - target: {fileID: 260643921168909717, guid: a9da405d91cf19a4aac4cb71e2a20e72, type: 3}
+      propertyPath: beetle
+      value: 
+      objectReference: {fileID: 60416549}
     - target: {fileID: 1201335637640328814, guid: a9da405d91cf19a4aac4cb71e2a20e72, type: 3}
       propertyPath: maxMoveSpeed
       value: 10
@@ -924,3 +999,4 @@ SceneRoots:
   - {fileID: 981035636}
   - {fileID: 788701404}
   - {fileID: 548141992}
+  - {fileID: 1496442339}

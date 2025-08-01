@@ -16,10 +16,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool accelerationColor;
     [SerializeField] SpriteRenderer sr;
 
-    private float moveInput;
+    private Vector2 moveInput;
     private float currentAcceleration;
     private float currentDesacceleration;
     private bool canMove = true;
+    private bool stickyMovement = false;
+    private float normalDir = 1;
 
     private void Start()
     {
@@ -29,19 +31,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        ApplyMovement();
+        ApplyHorizontalMovement(); 
+        ApplyVerticalMovement();
     }
 
-    public void ChangeMovementDirection(float value) 
+    public void ChangeMovementDirection(Vector2 value) 
     {
         moveInput = value;
     }
 
-    private void ApplyMovement()
+    private void ApplyHorizontalMovement()
     {
-        if (!canMove) return;
+        if (!canMove || stickyMovement) return;
 
-        float targetSpeed = moveInput * maxMoveSpeed;
+        float targetSpeed = moveInput.x * maxMoveSpeed;
 
         float speedDif = targetSpeed - pc.ballRb.velocity.x;
 
@@ -68,8 +71,45 @@ public class PlayerMovement : MonoBehaviour
         pc.ballRb.AddForce(Vector2.right * speedDif * accelRate);
     }
 
+    private void ApplyVerticalMovement()
+    {
+        if (!canMove || !stickyMovement) return;
+
+        float targetSpeed = normalDir * moveInput.x * maxMoveSpeed;
+
+        float speedDif = targetSpeed - pc.ballRb.velocity.y;
+
+        float accelRate;
+        if (targetSpeed * pc.ballRb.velocity.y >= 0)
+        {
+            if (Mathf.Abs(targetSpeed) >= Mathf.Abs(pc.ballRb.velocity.y))
+            {
+                accelRate = currentAcceleration;
+                if (accelerationColor) sr.color = Color.yellow;
+            }
+            else
+            {
+                accelRate = currentDesacceleration;
+                if (accelerationColor) sr.color = Color.blue;
+            }
+        }
+        else
+        {
+            accelRate = currentDesacceleration;
+            if (accelerationColor) sr.color = Color.blue;
+        }
+
+        pc.ballRb.AddForce(Vector2.up * speedDif * accelRate);
+    }
+
     public void SetMovement(bool value) 
     {
         canMove = value;
+    }
+
+    public void SetStickyMovement(bool stickyValue, int normalValue) 
+    {
+        stickyMovement = stickyValue;
+        normalDir = normalValue;
     }
 }

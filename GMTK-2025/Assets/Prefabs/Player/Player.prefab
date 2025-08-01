@@ -359,6 +359,7 @@ MonoBehaviour:
   playerFollow: {fileID: 7102168602743339368}
   ballRb: {fileID: 7020861332398523779}
   ballSizeController: {fileID: 7587416363920889003}
+  playerMovement: {fileID: 1201335637640328814}
   OnDeath:
     m_PersistentCalls:
       m_Calls:

@@ -17,6 +17,7 @@ public class LixoManager : MonoBehaviour
     public void JogarLixoFora(int value)
     {
         currentLixo -= value;
+        pc.SetStickyBehaviour(false);
         pc.ballSizeController.RemoveTrash(value);
     }
 }
