@@ -356,6 +356,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6285fd51d0928e440a5ccedca67c3a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beetle: {fileID: 2035502250829551374}
+  ball: {fileID: 6033391042674125282}
   playerFollow: {fileID: 7102168602743339368}
   ballRb: {fileID: 7020861332398523779}
   ballSizeController: {fileID: 7587416363920889003}

@@ -4218,7 +4218,7 @@ PrefabInstance:
     - target: {fileID: 260643921168909717, guid: a9da405d91cf19a4aac4cb71e2a20e72, type: 3}
       propertyPath: beetle
       value: 
-      objectReference: {fileID: 60416549}
+      objectReference: {fileID: 1552517317}
     - target: {fileID: 1201335637640328814, guid: a9da405d91cf19a4aac4cb71e2a20e72, type: 3}
       propertyPath: maxMoveSpeed
       value: 10
@@ -4287,6 +4287,11 @@ PrefabInstance:
 --- !u!4 &1552517316 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2780734239437927804, guid: a9da405d91cf19a4aac4cb71e2a20e72, type: 3}
+  m_PrefabInstance: {fileID: 1552517315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1552517317 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2035502250829551374, guid: a9da405d91cf19a4aac4cb71e2a20e72, type: 3}
   m_PrefabInstance: {fileID: 1552517315}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1612610371
@@ -4464,3 +4469,4 @@ SceneRoots:
   - {fileID: 788701404}
   - {fileID: 548141992}
   - {fileID: 80656636}
+  - {fileID: 1496442339}
