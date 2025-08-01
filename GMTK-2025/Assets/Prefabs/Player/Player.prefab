@@ -609,7 +609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pc: {fileID: 260643921168909717}
-  weightPerSize: 0.15
+  weightPerSize: 0.3
 --- !u!1 &8625715015076527794
 GameObject:
   m_ObjectHideFlags: 0
