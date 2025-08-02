@@ -5,13 +5,11 @@ using UnityEngine.UI;
 
 public class MusicManager : MonoBehaviour
 {
-    private static AudioSource audioSource;
+    public static AudioSource audioSource;
     public AudioClip backgroundMusic;
 
-    void Awake()
+    void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-
         if (backgroundMusic != null)
         {
             PlayBackgroundMusic(false, backgroundMusic);
@@ -28,6 +26,8 @@ public class MusicManager : MonoBehaviour
 
     public void PlayBackgroundMusic(bool resetSong, AudioClip audioClip = null)
     {
+        if (audioClip == audioSource.clip) return;
+
         if (audioClip != null)
         {
             audioSource.clip = audioClip;

@@ -8,13 +8,17 @@ public class AudioManager : MonoBehaviour
     public static MusicManager musicInstance;
     public static SoundEffectManager sfxInstance;
 
+    [SerializeField] private GameObject musicManagerObject; 
+    [SerializeField] private GameObject sfxManagerObject; 
+
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            musicInstance = GetComponentInChildren<MusicManager>();
-            sfxInstance = GetComponentInChildren<SoundEffectManager>();
+            musicInstance = musicManagerObject.GetComponent<MusicManager>();
+            MusicManager.audioSource = musicManagerObject.GetComponent<AudioSource>();
+            sfxInstance = sfxManagerObject.GetComponent<SoundEffectManager>();
             DontDestroyOnLoad(gameObject);
         }
         else

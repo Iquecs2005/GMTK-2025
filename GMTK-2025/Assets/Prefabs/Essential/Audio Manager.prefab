@@ -363,3 +363,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ee5ed797fbe95478ba8a2f6fb2a637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicManagerObject: {fileID: 1328282065626621183}
+  sfxManagerObject: {fileID: 2654579203433197428}

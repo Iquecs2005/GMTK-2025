@@ -48160,6 +48160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1896104515}
   - component: {fileID: 1896104516}
+  - component: {fileID: 1896104517}
   m_Layer: 6
   m_Name: Level
   m_TagString: Untagged
@@ -48240,6 +48241,19 @@ PolygonCollider2D:
       - {x: 17.25, y: -7.3}
       - {x: 17.25, y: 9.85}
   m_UseDelaunayMesh: 0
+--- !u!114 &1896104517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896104514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bf9aaf71b861a4f817fd70850b5452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicClip: {fileID: 8300000, guid: 94ad8607782a04848b7e28c53463d070, type: 3}
 --- !u!1001 &1922548587
 PrefabInstance:
   m_ObjectHideFlags: 0

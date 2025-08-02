@@ -11,11 +11,6 @@ public class SoundEffectManager : MonoBehaviour
     private static AudioSource audioSource;
     private static SoundEffectLibrary soundEffectLibrary;
 
-    private void Awake()
-    {
-
-    }
-
     public static void Play(string soundName)
     {
         float volume = 0;
@@ -35,11 +30,6 @@ public class SoundEffectManager : MonoBehaviour
         float sfxSavedVolume = PlayerPrefs.GetFloat("SFXVolume", 1f);
         // sfxSlider.value = savedVolume;
         SetVolume(sfxSavedVolume);
-    }
-
-    void Update()
-    {
-
     }
 
     public static void SetVolume(float volume)
