@@ -641,6 +641,10 @@ PrefabInstance:
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[1].Array.data[12].Y
       value: -10000000
       objectReference: {fileID: 0}
+    - target: {fileID: 2267160757542743380, guid: 7e1eda6800cc00f48b499043114b18e5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5087461962233337205, guid: 7e1eda6800cc00f48b499043114b18e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -684,6 +688,10 @@ PrefabInstance:
     - target: {fileID: 5805665196459242445, guid: 7e1eda6800cc00f48b499043114b18e5, type: 3}
       propertyPath: m_Name
       value: Grid
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805665196459242445, guid: 7e1eda6800cc00f48b499043114b18e5, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6906452940468846649, guid: 7e1eda6800cc00f48b499043114b18e5, type: 3}
       propertyPath: m_Size.x
@@ -5728,6 +5736,10 @@ PrefabInstance:
     - target: {fileID: 7329301019890746069, guid: 7e1eda6800cc00f48b499043114b18e5, type: 3}
       propertyPath: m_Tiles.Array.data[102].second.m_TileObjectToInstantiateIndex
       value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 9190296246872675382, guid: 7e1eda6800cc00f48b499043114b18e5, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
