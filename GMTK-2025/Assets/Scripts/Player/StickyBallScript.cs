@@ -20,17 +20,22 @@ public class StickyBallScript : MonoBehaviour
         spriteRenderer.color = Color.green;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void FixedUpdate()
     {
-        CheckForWall(collision);
+        CheckForWall();
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        CheckForWall(collision);
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    CheckForWall(collision);
+    //}
 
-    private void CheckForWall(Collision2D collision) 
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    CheckForWall(collision);
+    //}
+
+    private void CheckForWall() 
     {
         List<ContactPoint2D> contactList = new List<ContactPoint2D>();
         int contactPoints = ballCollider.GetContacts(contactList);
@@ -43,6 +48,7 @@ public class StickyBallScript : MonoBehaviour
         int newestContactPoint = contactPoints - 1;
         ContactPoint2D currentContactPoint = contactList[newestContactPoint];
         Vector2 contactNormal = currentContactPoint.normal;
+        print(contactNormal);
 
         if (Mathf.Abs(contactNormal.x) >= 0.5)
         {
