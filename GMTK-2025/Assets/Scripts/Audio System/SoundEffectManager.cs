@@ -18,10 +18,11 @@ public class SoundEffectManager : MonoBehaviour
 
     public static void Play(string soundName)
     {
-        AudioClip audioClip = soundEffectLibrary.GetRandomClip(soundName);
+        float volume = 0;
+        AudioClip audioClip = soundEffectLibrary.GetRandomClip(soundName, ref volume);
         if (audioClip != null)
         {
-            audioSource.PlayOneShot(audioClip);
+            audioSource.PlayOneShot(audioClip, volume);
         }
     }
 

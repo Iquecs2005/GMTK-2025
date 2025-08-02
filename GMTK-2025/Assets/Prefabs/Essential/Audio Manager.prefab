@@ -285,31 +285,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundEffectGroups:
-  - name: UIHover
-    audioClips:
-    - {fileID: 8300000, guid: 90ad0d71eddcc3843b231e07802c9d67, type: 3}
-    - {fileID: 8300000, guid: 0fecb034fc8f1bb4da3ee9c43ad3b9d2, type: 3}
-    - {fileID: 8300000, guid: 8e97dfbf6805db0498e30c592aa2aac0, type: 3}
-    - {fileID: 8300000, guid: e10768faac706cd47a60a7069a4d00c2, type: 3}
-    - {fileID: 8300000, guid: 7476ad312c7735c48a3cc765d78d558f, type: 3}
-    - {fileID: 8300000, guid: 253c0d42203008f4d9723ce52d1a4d08, type: 3}
-    - {fileID: 8300000, guid: f724621318656a6469a01d27098b2877, type: 3}
-    - {fileID: 8300000, guid: 2e646745ea70ebb4aae8faf449a47c30, type: 3}
   - name: GameOver
     audioClips:
-    - {fileID: 8300000, guid: 67020d1ef26a672459d4e9008656b72f, type: 3}
+    - volume: 1
+      audioClip: {fileID: 8300000, guid: 67020d1ef26a672459d4e9008656b72f, type: 3}
   - name: NormalTrash
     audioClips:
-    - {fileID: 8300000, guid: a0e4a42b3dea3d84ebe7521a29074b57, type: 3}
+    - volume: 1
+      audioClip: {fileID: 0}
   - name: StickyTrash
     audioClips:
-    - {fileID: 8300000, guid: a0e4a42b3dea3d84ebe7521a29074b57, type: 3}
+    - volume: 1
+      audioClip: {fileID: 8300000, guid: a0e4a42b3dea3d84ebe7521a29074b57, type: 3}
   - name: Click
     audioClips:
-    - {fileID: 8300000, guid: b6cdbc69165863345b37722a48d66a1e, type: 3}
+    - volume: 1
+      audioClip: {fileID: 8300000, guid: b6cdbc69165863345b37722a48d66a1e, type: 3}
   - name: MouseOver
     audioClips:
-    - {fileID: 8300000, guid: eefcbe74f95ebcb4881cea99cbb3e0ef, type: 3}
+    - volume: 1
+      audioClip: {fileID: 8300000, guid: eefcbe74f95ebcb4881cea99cbb3e0ef, type: 3}
 --- !u!114 &8599803980140931047
 MonoBehaviour:
   m_ObjectHideFlags: 0
