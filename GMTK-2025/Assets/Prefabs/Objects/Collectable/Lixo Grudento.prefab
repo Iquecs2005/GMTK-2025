@@ -37,16 +37,20 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5832922301118932780, guid: c2030c3be26a24a44ad62ec7cd9da9f0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4e06a5b8323d6014a8908d0c4a92bf2b, type: 3}
+    - target: {fileID: 5832922301118932780, guid: c2030c3be26a24a44ad62ec7cd9da9f0, type: 3}
       propertyPath: m_Color.b
-      value: 0.16249603
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5832922301118932780, guid: c2030c3be26a24a44ad62ec7cd9da9f0, type: 3}
       propertyPath: m_Color.g
-      value: 0.81960785
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5832922301118932780, guid: c2030c3be26a24a44ad62ec7cd9da9f0, type: 3}
       propertyPath: m_Color.r
-      value: 0.13725488
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7969689194869443471, guid: c2030c3be26a24a44ad62ec7cd9da9f0, type: 3}
       propertyPath: m_Name
