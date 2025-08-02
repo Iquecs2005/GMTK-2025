@@ -10,6 +10,8 @@ public class LixoController : MonoBehaviour
     [Header("Components")]
     [SerializeField] private TMP_Text currentTrashText;
     [SerializeField] private TMP_Text totalTrashText;
+    [SerializeField] private TMP_Text winScreenTimerText;
+    [SerializeField] private TMP_Text actualTimerText;
 
     [Header("Events")]
     [SerializeField] private UnityEvent OnWin;
@@ -33,11 +35,17 @@ public class LixoController : MonoBehaviour
 
         if (lixoCollected >= lixoInScene)
         {
-            OnWin.Invoke();
-            hasWon = true;
-            UnlockNewLevel();
-            Time.timeScale = 0;
+            ActivateWin();
         }
+    }
+
+    private void ActivateWin() 
+    {
+        winScreenTimerText.text = "in " + actualTimerText.text;
+        OnWin.Invoke();
+        hasWon = true;
+        UnlockNewLevel();
+        Time.timeScale = 0;
     }
 
     private void UpdateUI()
