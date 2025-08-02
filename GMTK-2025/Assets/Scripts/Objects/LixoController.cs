@@ -33,7 +33,7 @@ public class LixoController : MonoBehaviour
         lixoCollected += amount;
         UpdateUI();
 
-        if (lixoCollected >= lixoInScene)
+        if (lixoCollected >= lixoInScene && !GameManager.Instance.GetPlayerRef().GetComponent<PlayerController>().dead)
         {
             ActivateWin();
         }

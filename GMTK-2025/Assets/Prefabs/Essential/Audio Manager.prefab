@@ -298,6 +298,18 @@ MonoBehaviour:
   - name: GameOver
     audioClips:
     - {fileID: 8300000, guid: 67020d1ef26a672459d4e9008656b72f, type: 3}
+  - name: NormalTrash
+    audioClips:
+    - {fileID: 8300000, guid: a0e4a42b3dea3d84ebe7521a29074b57, type: 3}
+  - name: StickyTrash
+    audioClips:
+    - {fileID: 8300000, guid: a0e4a42b3dea3d84ebe7521a29074b57, type: 3}
+  - name: Click
+    audioClips:
+    - {fileID: 8300000, guid: b6cdbc69165863345b37722a48d66a1e, type: 3}
+  - name: MouseOver
+    audioClips:
+    - {fileID: 8300000, guid: eefcbe74f95ebcb4881cea99cbb3e0ef, type: 3}
 --- !u!114 &8599803980140931047
 MonoBehaviour:
   m_ObjectHideFlags: 0

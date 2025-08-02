@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
         if (lixoControllerRef != null) return lixoControllerRef;
 
         lixoControllerRef = GameObject.Find("LevelCompletedCanvas").GetComponent<LixoController>();
-        print(lixoControllerRef);
         return lixoControllerRef;
     }
 }

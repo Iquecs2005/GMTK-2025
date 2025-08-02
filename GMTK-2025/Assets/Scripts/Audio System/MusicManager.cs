@@ -8,12 +8,7 @@ public class MusicManager : MonoBehaviour
     private static AudioSource audioSource;
     public AudioClip backgroundMusic;
 
-    private void Awake()
-    {
-
-    }
-
-    void Start()
+    void Awake()
     {
         audioSource = GetComponent<AudioSource>();
 

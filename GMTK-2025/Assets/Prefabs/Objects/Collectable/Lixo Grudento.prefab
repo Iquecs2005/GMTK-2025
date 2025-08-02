@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1580742249539264620, guid: c2030c3be26a24a44ad62ec7cd9da9f0, type: 3}
+      propertyPath: onCollectionAudioName
+      value: StickyTrash
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580742249539264620, guid: c2030c3be26a24a44ad62ec7cd9da9f0, type: 3}
       propertyPath: OnCollision.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}

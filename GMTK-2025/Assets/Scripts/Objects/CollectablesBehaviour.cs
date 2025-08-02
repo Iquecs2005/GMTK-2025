@@ -5,6 +5,10 @@ using UnityEngine.Events;
 
 public class CollectablesBehaviour : MonoBehaviour
 {
+    [Header("Variables")]
+    [SerializeField] private string onCollectionAudioName;
+
+    [Header("Events")]
     [SerializeField] private UnityEvent<Collider2D> OnCollision;
 
     private void Start()
@@ -17,6 +21,7 @@ public class CollectablesBehaviour : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             LixoManager playerLixoManager = collision.transform.parent.GetComponent<LixoManager>();
+            SoundEffectManager.Play(onCollectionAudioName);
             OnCollision.Invoke(collision);
             playerLixoManager.AddLixo(1);
             Destroy(gameObject);
