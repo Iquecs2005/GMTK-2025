@@ -6,24 +6,39 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Test Haykal/MainMenu.unity
-    guid: 92841d851d5bb3c439d833056793ada7
+    path: Assets/Scenes/MainMenu.unity
+    guid: 94dd70cae1e13e4488a4356091624010
   - enabled: 1
-    path: Assets/Scenes/Test Haykal/LevelMenu.unity
-    guid: d2755e9fbb416bc48990e0085785d128
+    path: Assets/Scenes/LevelMenu.unity
+    guid: c2f553378895116488563327d73de149
   - enabled: 1
-    path: Assets/Scenes/Test Haykal/TestA.unity
-    guid: 8302fff88f313d4428fa976b711703e5
-  - enabled: 1
-    path: Assets/Scenes/Test Haykal/TestB.unity
-    guid: 28509f16ef0fcb54f9f60e0cd1a47180
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/Tutorial.unity
+    guid: 2ca144ca62f1abd4c9864266f33afafd
   - enabled: 1
     path: Assets/Scenes/Levels/Level 1-1.unity
     guid: 9eddb5aa6d27fbe4abaf5866941203f6
   - enabled: 1
     path: Assets/Scenes/Levels/Level 2-1.unity
     guid: 43b83e8de6aab43459f3d7f08fd04847
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 3-1.unity
+    guid: 8890cf7a22f79ee47a16f7b4edcc1aba
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 4-1.unity
+    guid: 882563d5808f1cd428c4216e971fb96a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 5-1.unity
+    guid: 3c23200bacf2b5b44aa68eb25c674f8a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 5-2.unity
+    guid: a9714723090453d48b0b164f52fa20f1
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 6-1.unity
+    guid: 924cea8f272f6f4449b0e8a04bbcdf1d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 6-2.unity
+    guid: 2cc448e2ee57d0140a013e261284c9da
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 7-1.unity
+    guid: c66a57b917ab251429ddf55845b263cd
   m_configObjects: {}
