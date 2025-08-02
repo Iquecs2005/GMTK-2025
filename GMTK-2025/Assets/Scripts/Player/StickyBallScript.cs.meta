@@ -3,7 +3,9 @@ guid: 478f1600a4acbac4da3c65cd036315f0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pc: {instanceID: 0}
+  - stickyBallSprite: {fileID: 21300000, guid: 86f120b9087015c4ba3ebf2a5d68289b, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

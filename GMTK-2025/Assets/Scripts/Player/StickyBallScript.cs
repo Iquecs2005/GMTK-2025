@@ -5,19 +5,14 @@ using UnityEngine;
 public class StickyBallScript : MonoBehaviour
 {
     [SerializeField] private PlayerController pc;
-    private SpriteRenderer spriteRenderer;
 
     private Collider2D ballCollider;
-    private Color originalColor;
+    
 
     private void Awake()
     {
         ballCollider = GetComponent<Collider2D>();
         pc = GetComponentInParent<PlayerController>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
-        originalColor = spriteRenderer.color;
-        spriteRenderer.color = Color.green;
     }
 
     private void FixedUpdate()
@@ -48,7 +43,6 @@ public class StickyBallScript : MonoBehaviour
         int newestContactPoint = contactPoints - 1;
         ContactPoint2D currentContactPoint = contactList[newestContactPoint];
         Vector2 contactNormal = currentContactPoint.normal;
-        print(contactNormal);
 
         if (Mathf.Abs(contactNormal.x) >= 0.5)
         {
@@ -80,7 +74,6 @@ public class StickyBallScript : MonoBehaviour
 
     private void OnDestroy()
     {
-        spriteRenderer.color = originalColor;
         DisableStickyMovement();
     }
 }
