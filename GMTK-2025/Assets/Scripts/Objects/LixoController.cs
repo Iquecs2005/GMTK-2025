@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 public class LixoController : MonoBehaviour
 {
     [Header("Components")]
-    [SerializeField] private TMP_Text lixoCounter;
+    [SerializeField] private TMP_Text currentTrashText;
+    [SerializeField] private TMP_Text totalTrashText;
 
     [Header("Events")]
     [SerializeField] private UnityEvent OnWin;
@@ -20,7 +21,7 @@ public class LixoController : MonoBehaviour
     public void AddLixoScene(int amount)
     {
         lixoInScene += amount;
-        UpdateLixoCounter();
+        UpdateUI();
     }
 
     public void AddLixoCollected(int amount)
@@ -28,7 +29,7 @@ public class LixoController : MonoBehaviour
         if (hasWon) return;
 
         lixoCollected += amount;
-        UpdateLixoCounter();
+        UpdateUI();
 
         if (lixoCollected >= lixoInScene)
         {
@@ -39,10 +40,10 @@ public class LixoController : MonoBehaviour
         }
     }
 
-    private void UpdateLixoCounter()
+    private void UpdateUI()
     {
-        string displayText = $"{lixoCollected}/{lixoInScene}";
-        lixoCounter.text = displayText;
+        currentTrashText.text = lixoCollected.ToString();
+        totalTrashText.text = lixoInScene.ToString();
     }
 
     void UnlockNewLevel()

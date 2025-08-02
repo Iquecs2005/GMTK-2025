@@ -1363,10 +1363,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 65443953}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1006143455}
+        m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1374,18 +1374,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1006143453}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &558203251
 MonoBehaviour:
@@ -1964,8 +1952,8 @@ MonoBehaviour:
 
     THE DUNG BEETLE'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: abe6def1b111a6e41863dcc1062a4e25, type: 2}
-  m_sharedMaterial: {fileID: 2399966109290382574, guid: abe6def1b111a6e41863dcc1062a4e25, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: aec771b44029941499f43dbcc9a22a77, type: 2}
+  m_sharedMaterial: {fileID: 3884085783167272744, guid: aec771b44029941499f43dbcc9a22a77, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2048,6 +2036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1006143454}
+  - component: {fileID: 1006143455}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -2080,6 +2069,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1006143455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006143453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40f099f5d2c14641b40c33f028c9050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1113000105
 GameObject:
   m_ObjectHideFlags: 0
