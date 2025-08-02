@@ -334,6 +334,7 @@ MonoBehaviour:
   totalTrashText: {fileID: 3955583679631974130}
   winScreenTimerText: {fileID: 3797953895486096685}
   actualTimerText: {fileID: 0}
+  onWinMusic: {fileID: 8300000, guid: 038d5257b41eea84b884bda40f4ad3a2, type: 3}
   OnWin:
     m_PersistentCalls:
       m_Calls:

@@ -12,6 +12,7 @@ public class LixoController : MonoBehaviour
     [SerializeField] private TMP_Text totalTrashText;
     [SerializeField] private TMP_Text winScreenTimerText;
     [SerializeField] private TMP_Text actualTimerText;
+    [SerializeField] private AudioClip onWinMusic;
 
     [Header("Events")]
     [SerializeField] private UnityEvent OnWin;
@@ -44,6 +45,7 @@ public class LixoController : MonoBehaviour
         winScreenTimerText.text = "in " + actualTimerText.text;
         OnWin.Invoke();
         hasWon = true;
+        AudioManager.musicInstance.PlayBackgroundMusic(false, onWinMusic);
         UnlockNewLevel();
         Time.timeScale = 0;
     }
