@@ -292,7 +292,7 @@ MonoBehaviour:
   - name: NormalTrash
     audioClips:
     - volume: 1
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 8daf9011ced38d64c9dc09bb14fce70f, type: 3}
   - name: StickyTrash
     audioClips:
     - volume: 1
