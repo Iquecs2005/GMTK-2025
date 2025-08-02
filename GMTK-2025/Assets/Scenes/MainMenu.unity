@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.854902, g: 0.45882356, b: 0.21960786, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2861,6 +2861,46 @@ PrefabInstance:
     - target: {fileID: 1712298412916311284, guid: 58f2fc49e8aa8f24fa099ae99e37a500, type: 3}
       propertyPath: m_Name
       value: Slider Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430721024292033946, guid: 58f2fc49e8aa8f24fa099ae99e37a500, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430721024292033946, guid: 58f2fc49e8aa8f24fa099ae99e37a500, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636379021484313849, guid: 58f2fc49e8aa8f24fa099ae99e37a500, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636379021484313849, guid: 58f2fc49e8aa8f24fa099ae99e37a500, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636379021484313849, guid: 58f2fc49e8aa8f24fa099ae99e37a500, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475427550780683419, guid: 58f2fc49e8aa8f24fa099ae99e37a500, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475427550780683419, guid: 58f2fc49e8aa8f24fa099ae99e37a500, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475427550780683419, guid: 58f2fc49e8aa8f24fa099ae99e37a500, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637264502316495292, guid: 58f2fc49e8aa8f24fa099ae99e37a500, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637264502316495292, guid: 58f2fc49e8aa8f24fa099ae99e37a500, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
