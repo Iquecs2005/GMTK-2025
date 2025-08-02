@@ -14,5 +14,6 @@ public class GameOverController : MonoBehaviour
     private void ActivateGameOverScreen() 
     {
         gameOverHolder.SetActive(true);
+        SoundEffectManager.Play("GameOver");
     } 
 }
