@@ -42,7 +42,7 @@ public class LixoController : MonoBehaviour
 
     private void ActivateWin() 
     {
-        winScreenTimerText.text = "in " + actualTimerText.text;
+        winScreenTimerText.text = actualTimerText.text;
         OnWin.Invoke();
         hasWon = true;
         AudioManager.musicInstance.PlayBackgroundMusic(false, onWinMusic);

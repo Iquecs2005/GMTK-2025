@@ -48565,6 +48565,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Level 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1805148155227974831, guid: 84c513ca9558aaa4191e04abd33d02ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Level 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6481817727091250231, guid: 84c513ca9558aaa4191e04abd33d02ee, type: 3}
       propertyPath: m_Name
       value: Essential

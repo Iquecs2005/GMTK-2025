@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Level 11.unity
     guid: e200c4ade83755147b310f1f46ac2ac2
   - enabled: 1
+    path: Assets/Scenes/Levels/Vacation.unity
+    guid: 6a8c94c340743df4eae43499d9acede1
+  - enabled: 1
     path: Assets/Scenes/Levels/Level Temp 2-1.unity
     guid: 43b83e8de6aab43459f3d7f08fd04847
   - enabled: 1
