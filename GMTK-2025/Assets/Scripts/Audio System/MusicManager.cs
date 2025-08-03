@@ -15,7 +15,7 @@ public class MusicManager : MonoBehaviour
             PlayBackgroundMusic(false, backgroundMusic);
         }
 
-        float MusicSavedVolume = PlayerPrefs.GetFloat("MusicVolume", 1f);
+        float MusicSavedVolume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
         SetVolume(MusicSavedVolume);
     }
 
@@ -26,6 +26,8 @@ public class MusicManager : MonoBehaviour
 
     public void PlayBackgroundMusic(bool resetSong, AudioClip audioClip = null)
     {
+        audioSource.UnPause();
+
         if (audioClip == audioSource.clip) return;
 
         if (audioClip != null)
@@ -43,7 +45,7 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    public void PauseBackgroundMusic()
+    static public void PauseBackgroundMusic()
     {
         audioSource.Pause();
     }

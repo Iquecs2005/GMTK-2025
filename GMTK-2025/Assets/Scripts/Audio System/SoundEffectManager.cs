@@ -27,7 +27,7 @@ public class SoundEffectManager : MonoBehaviour
         soundEffectLibrary = GetComponent<SoundEffectLibrary>();
 
 
-        float sfxSavedVolume = PlayerPrefs.GetFloat("SFXVolume", 1f);
+        float sfxSavedVolume = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
         // sfxSlider.value = savedVolume;
         SetVolume(sfxSavedVolume);
     }

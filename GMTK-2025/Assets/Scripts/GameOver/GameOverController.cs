@@ -20,6 +20,7 @@ public class GameOverController : MonoBehaviour
     {
         gameOverHolder.SetActive(true);
         OnGameOver.Invoke();
+        MusicManager.PauseBackgroundMusic();
         SoundEffectManager.Play("GameOver");
     } 
 }
