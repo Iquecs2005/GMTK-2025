@@ -9,19 +9,25 @@ public class PlayerFollow : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
     private Vector2 offset;
+    private bool shouldFollow = true;
 
     private void Start()
     {
         offset = transform.position - target.position;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        rb.MovePosition(target.position + (Vector3)offset);
+        if (shouldFollow) rb.MovePosition(target.position + (Vector3)offset);
     }
 
     public void ChangeYOffset(float ballScale) 
     {
         offset.y = ballScale / 2;
+    }
+
+    public void SetFollow(bool value) 
+    {
+        shouldFollow = value;
     }
 }

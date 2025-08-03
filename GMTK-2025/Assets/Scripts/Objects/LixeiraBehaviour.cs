@@ -6,18 +6,13 @@ using UnityEngine.UI;
 
 public class LixeiraBehaviour : MonoBehaviour
 {
-    [Header("Components")]
-    [SerializeField] private TMP_Text currentTrash;
-    [SerializeField] private TMP_Text totalTrash;
-
     [Header("Lixeira Properts")]
     public int maxLixo;
     public int currentLixo;
     public int lixeiraEspaco;
 
     [Header("Sprite Changer")]
-    public Sprite lixeiraVazia;
-    public Sprite lixeiraCheia;
+    public Sprite[] spritesLixeira;
     
     //Private variables
     private LixoManager playerLixoManager;
@@ -26,7 +21,6 @@ public class LixeiraBehaviour : MonoBehaviour
     void Start()
     {
         lixeiraEspaco = maxLixo - currentLixo;
-        UpdateUI();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -56,7 +50,6 @@ public class LixeiraBehaviour : MonoBehaviour
                 currentLixo += lixoTransferido;
                 lixeiraEspaco -= lixoTransferido;
                 ChangeSprite();
-                UpdateUI();
 
                 Debug.Log($"Jogou fora: {lixoTransferido} | Player lixo: {playerLixoManager.currentLixo} | Lixeira lixo: {currentLixo}");
             }
@@ -69,19 +62,6 @@ public class LixeiraBehaviour : MonoBehaviour
 
     private void ChangeSprite()
     {
-        if (lixeiraEspaco == 0)
-        {
-            spriteRenderer.sprite = lixeiraCheia;
-        }
-        else
-        {
-            spriteRenderer.sprite = lixeiraVazia;
-        }
-    }
-
-    private void UpdateUI() 
-    {
-        currentTrash.text = currentLixo.ToString();
-        totalTrash.text = maxLixo.ToString();
+        spriteRenderer.sprite = spritesLixeira[currentLixo];
     }
 }

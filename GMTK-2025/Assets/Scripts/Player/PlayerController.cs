@@ -7,12 +7,14 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Components")]
     public GameObject beetle;
-    public GameObject ball;
     public PlayerFollow playerFollow;
+    public PlayerMovement playerMovement;
+    public Animator playerAnimator;
+    public SpriteRenderer beetleSpriteRenderer;
+    public GameObject ball;
     public Rigidbody2D ballRb;
     public SpriteRenderer ballSr;
     public BallSizeController ballSizeController;
-    public PlayerMovement playerMovement;
 
     [Header("Variables")]
     [SerializeField] private Sprite stickyBallSprite;
@@ -37,7 +39,6 @@ public class PlayerController : MonoBehaviour
         {
             sticky = false;
             ballSr.sprite = originalSprite;
-            print(ball.GetComponent<StickyBallScript>());
             Destroy(ball.GetComponent<StickyBallScript>());
         }
     }
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
         if (dead) return;
 
         dead = true;
+        playerAnimator.Play("Caindo");
         OnDeath.Invoke();
     }
 }

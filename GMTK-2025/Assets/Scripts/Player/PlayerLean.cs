@@ -35,9 +35,12 @@ public class PlayerLean : MonoBehaviour
 
     private void FixedUpdate()
     {
-        currentAngle = GetCurrentAngle();
-        ApplyRotation();
-        CheckAngleBound();
+        if (!pc.dead) 
+        {
+            currentAngle = GetCurrentAngle();
+            ApplyRotation();
+            CheckAngleBound();
+        }
     }
 
     private float GetCurrentAngle() 

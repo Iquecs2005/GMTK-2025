@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -31,13 +32,27 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        ApplyHorizontalMovement(); 
+        ApplyHorizontalMovement();
+        if (!pc.dead)
+            pc.playerAnimator.SetFloat("InputX", Mathf.Max(Mathf.Abs(pc.ballRb.velocity.x), Mathf.Abs(moveInput.x)));
+        else
+            pc.playerAnimator.SetFloat("InputX", 0);
         ApplyVerticalMovement();
     }
 
     public void ChangeMovementDirection(Vector2 value) 
     {
+        if (pc.dead) return;
+
         moveInput = value;
+        if (moveInput.x > 0.1f) 
+        {
+            pc.beetleSpriteRenderer.flipX = false;
+        }
+        else if (moveInput.x < -0.1f) 
+        {
+            pc.beetleSpriteRenderer.flipX = true;
+        }
     }
 
     private void ApplyHorizontalMovement()

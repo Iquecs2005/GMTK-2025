@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7102168602743339368}
   - component: {fileID: 4956003743939318110}
   - component: {fileID: 7374505623275075685}
-  - component: {fileID: 4616252949648068524}
+  - component: {fileID: 8743454966352357465}
   m_Layer: 7
   m_Name: Besouro
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2035502250829551374}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0.05, y: 0.5, z: 0}
   m_LocalScale: {x: 0.75, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -87,7 +87,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 1
+  m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -100,8 +100,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &4616252949648068524
-BoxCollider2D:
+--- !u!70 &8743454966352357465
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -132,19 +132,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0.4}
+  m_Size: {x: 1, y: 0.9}
+  m_Direction: 0
 --- !u!1 &4239381802158278850
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 4239381802158278850}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14, y: 0.413, z: 0}
+  m_LocalPosition: {x: -0.206, y: 0.383, z: 0}
   m_LocalScale: {x: 1.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -330,35 +320,11 @@ MonoBehaviour:
     m_ActionId: eca6692d-bbec-493a-b74b-4a6051e9a7d6
     m_ActionName: Normal/Move[/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7587416363920889003}
-        m_TargetAssemblyTypeName: BallSizeController, Assembly-CSharp
-        m_MethodName: AddTrash
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: e2d1507a-2a31-4165-8060-97e90e169e75
     m_ActionName: Normal/IncreaseWeight[/Keyboard/i]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7587416363920889003}
-        m_TargetAssemblyTypeName: BallSizeController, Assembly-CSharp
-        m_MethodName: RemoveTrash
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: ac45041a-589c-405f-a10b-477e4265cb36
     m_ActionName: Normal/DecreaseWeight[/Keyboard/u]
   m_NeverAutoSwitchControlSchemes: 0
@@ -379,12 +345,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beetle: {fileID: 2035502250829551374}
-  ball: {fileID: 6033391042674125282}
   playerFollow: {fileID: 7102168602743339368}
+  playerMovement: {fileID: 1201335637640328814}
+  playerAnimator: {fileID: 2210802016148348129}
+  beetleSpriteRenderer: {fileID: 7765468576385239396}
+  ball: {fileID: 6033391042674125282}
   ballRb: {fileID: 7020861332398523779}
   ballSr: {fileID: 6607009381054177515}
   ballSizeController: {fileID: 7587416363920889003}
-  playerMovement: {fileID: 1201335637640328814}
   stickyBallSprite: {fileID: 21300000, guid: 86f120b9087015c4ba3ebf2a5d68289b, type: 3}
   OnDeath:
     m_PersistentCalls:
@@ -401,9 +369,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2035502250829551374}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 7374505623275075685}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody2D, UnityEngine
+        m_MethodName: set_gravityScale
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7102168602743339368}
+        m_TargetAssemblyTypeName: PlayerFollow, Assembly-CSharp
+        m_MethodName: SetFollow
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
